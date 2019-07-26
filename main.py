@@ -102,7 +102,7 @@ def main():
     gfwlist = combine_lists(content)
     domains = parse_gfwlist(gfwlist)
     domains = reduce_domains(domains)
-    domains = "DOMAIN-SUFFIX " + "\nDOMAIN-SUFFIX ".join(domains)
+    domains = "DOMAIN-SUFFIX," + "\nDOMAIN-SUFFIX,".join(domains)
     print(domains)
 
     with open('resources/GFWList.list', 'wb') as f:
